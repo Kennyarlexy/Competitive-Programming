@@ -1,0 +1,23 @@
+Input: 
+- Plaintext (128-bit)
+- Key (128-bit, 192-bit, atau 256-bit)
+
+Output: 
+- Ciphertext (128-bit)
+
+Procedure AES(Plaintext, Key):
+    KeyExpansion(Key)
+    AddRoundKey(Plaintext, RoundKey[0])  // Putaran awal
+    
+    For each round from 1 to Nr-1 do:
+        SubBytes(Plaintext)
+        ShiftRows(Plaintext)
+        MixColumns(Plaintext)
+        AddRoundKey(Plaintext, RoundKey[Round])
+    
+    // Putaran terakhir
+    SubBytes(Plaintext)
+    ShiftRows(Plaintext)
+    AddRoundKey(Plaintext, RoundKey[Nr])
+
+    Return Ciphertext
