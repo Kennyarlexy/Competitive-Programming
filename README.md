@@ -1,0 +1,1 @@
+In this repository, I show everything that I have done during my journey in competitive programming, accumulating around one thousand problems solved on programming challanges platforms and contests.
