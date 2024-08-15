@@ -9,8 +9,8 @@ ll sz[300005];
 // Method -> find(), same(), unite()
 // returns the representative of u
 ll find(ll u) {
-    while (link[u] != u) u = link[u];
-    return u;
+    if (link[u] == u) return u;
+    return link[u] = find(u);
 }
 
 // returns true if u and v belong to the same set (have the same representative)
